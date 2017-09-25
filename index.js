@@ -16,21 +16,12 @@ btc_app.controller('price', function ($scope){
 		var current_btc = data.bpi.USD.rate_float;
 		console.log(current_btc);
 		//console.log(i++ + ": btc: " + "g");
-		
-		//var my = current_btc;
-		
-		
+		$scope.btc = current_btc;
 	});
 	
 	//var my = current_btc;
 	//	console.log("current_btc: "+ my);
-	$scope.btc = current_btc;
+	
 	
 	//current_btc = 9;
 });
-
-
-
-
-
-
