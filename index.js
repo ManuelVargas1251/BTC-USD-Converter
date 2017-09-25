@@ -24,7 +24,7 @@ btc_app.controller('price', function ($scope){
 	
 	//var my = current_btc;
 	//	console.log("current_btc: "+ my);
-	//$scope.btc = 5;
+	$scope.btc = 5;
 	
 	//current_btc = 9;
 });
