@@ -1,0 +1,68 @@
+<div id="body" ng-app="btc_app" ng-init="stdbtc=1;stdusd=0;_btc=0.5;">
+ <h1><span style="color: gold;">🎃 BTC</span> to USD 🎃</h1>
+	
+	<h2>
+		<div ng-controller="price">
+			hey {{btc | number}} hey
+		</div>
+	</h2>
+	
+	
+ <table>
+  <tr>
+   <th>Standard</th>
+   <th>Amount</th>
+  </tr>
+  <tr>
+   <td>BTC</td>
+   <td>
+    <input type="number" ng-model="stdbtc" />
+   </td>
+  </tr>
+  <tr>
+   <td ng-controller="price">USD*</td >
+   <td>
+    <input type="number" ng-model="stdusd"/>{{btc}}
+   </td>
+   <th>
+    <button id="button">
+					<a>Update</a>
+				</button>
+   </th>
+  </tr>
+ </table>
+
+ <br/>
+
+ <table>
+  <tr>
+   <th>You</th>
+   <th>Amount</th>
+  </tr>
+  <tr>
+   <td>BTC*</td>
+   <td>
+    <input type="number" ng-model="_btc"/>
+   </td>
+  </tr>
+  <tr>
+   <td >USD</td>
+   <td>
+    {{(stdusd*_btc)/stdbtc}}
+   </td>
+  </tr>
+ </table>
+
+ <!-- About -->
+ <p>
+	<h2>👻 Inputs 👻</h2>
+	 	* Custom BTC price in USD<br>
+		* Your BTC value<p>
+		BTC API by <a href="//www.coindesk.com/api/" 	
+									target="_blank">coindesk</a>
+ </p>
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
