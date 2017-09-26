@@ -1,1 +1,1 @@
-# BTC-to-USD
+# BTC to USD Converter
