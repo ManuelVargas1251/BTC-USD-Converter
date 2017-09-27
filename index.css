@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
 
 html{
 	--main-color: limegreen;
-	font-family: 'Montserrat',helvetica;
+	--font-fam: 'Montserrat',helvetica;
+	
+	font-family: var(--font-fam);
 	font-size: 170%;
 	background-color: #1c1c1c;
 	color: #eee;
@@ -21,12 +23,11 @@ a{
 	text-decoration: none;
 	color: var(--main-color);
 }
-a:hover{
-	color: #eee;
-}
+
 
 input, input[type=number]{
 	font-size: 27px;
+	font-family: var(--font-fam);
 	color: var(--main-color);
 	margin: 0px;
 	width: 100%;
@@ -69,16 +70,23 @@ th{
 }
 button{
 	font-size: 27px;
+	font-family: var(--font-fam);
 	background-color: #111;
 	border: none;
 	text-align: middle;
-	width: 100%;
+	width: 30%;
 	height: 100%;
-	padding: 0px;
+	padding: 7px 22px;
+	display: inline;
 }
 
 button:focus{
 	outline:none;
+}
+
+button:hover{
+	background-color: var(--main-color);
+	color: white;
 }
 
 ::selection {

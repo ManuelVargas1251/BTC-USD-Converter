@@ -1,77 +1,66 @@
-<html>
-	<link rel="stylesheet" href="index.css">
-
-<div id="body" ng-app="btc_app" ng-init="stdbtc=1;stdusd=0;_btc=0.5;">
- <h1><span style="color: gold;">🎃 BTC</span> to USD 🎃</h1>
+<div id="body" ng-app="btc_app" ng-init="stdbtc=1;stdusd=0;_btc=0.53;" ng-controller="price">
+	<h1><span style="color: gold;">BTC</span> to USD ??</h1>
 	
-	<h2>
-		<div ng-controller="price">
-			hey {{btc}} hey
-		</div>
-	</h2>
+	<table>
+  		<tr>
+			<th>STANDARD</th>
+			<th>AMOUNT</th>
+		</tr>
+		<tr>
+			<td>BTC</td>
+			<td>
+			<input type="number" ng-model="stdbtc" />
+			</td>
+		</tr>
+		<tr>
+			<td>USD*</td >
+			<td>
+			<input type="number" ng-model="btc"/>
+			</td>
+		</tr>
+	</table>
+
+ 	<br/>
+
+	<table>
+		<tr>
+			<th>YOU</th>
+			<th>AMOUNT</th>
+		</tr>
+		<tr>
+			<td>BTC*</td>
+			<td>
+			<input id='focus' type="number" ng-model="_btc"/>
+			</td>
+		</tr>
+		<tr>
+			<td >USD</td>
+			<td>
+			${{(btc*_btc)/stdbtc}}
+			</td>
+		</tr>
+	</table>
+
+	<br/>
+
+
+	<!-- Buttons -->
+	<div style="padding: 8px 8px;">
+		<button ng-click="update_price()"><a>UPDATE</a></button>
+		<button ng-click="round_toggle()"><a>ROUND</a></button>
+	</div>
 	
-	
- <table>
-  <tr>
-   <th>Standard</th>
-   <th>Amount</th>
-  </tr>
-  <tr>
-   <td>BTC</td>
-   <td>
-    <input type="number" ng-model="stdbtc" />
-   </td>
-  </tr>
-  <tr>
-   <td>USD*</td >
-   <td>
-    <input type="number" ng-model="stdusd"/> <!-- {{btc}} -->
-   </td>
-   <th>
-    <button id="button">
-					<a>Update</a>
-				</button>
-   </th>
-  </tr>
- </table>
-
- <br/>
-
- <table>
-  <tr>
-   <th>You</th>
-   <th>Amount</th>
-  </tr>
-  <tr>
-   <td>BTC*</td>
-   <td>
-    <input type="number" ng-model="_btc"/>
-   </td>
-  </tr>
-  <tr>
-   <td >USD</td>
-   <td>
-    {{(stdusd*_btc)/stdbtc}}
-   </td>
-  </tr>
- </table>
-
  <!-- About -->
- <p>
-	<h2>👻 Inputs 👻</h2>
-	 	* Custom BTC price in USD<br>
+	<p>
+	<h2>Inputs ??</h2>
+		* Real-Time Hourly Average BTC<br>
 		* Your BTC value<p>
 		BTC API by <a href="//www.coindesk.com/api/" 	
-									target="_blank">coindesk</a>
- </p>
+		target="_blank">coindesk</a>
+	</p>
 </div>
+
 <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-	
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
-<script src="index.js"></script>
-	
-	
-</html>

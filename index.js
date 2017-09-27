@@ -1,44 +1,47 @@
 //https://www.coindesk.com/api/
-//https://www.socialexplorer.com/
 
-// Create a new module
 console.clear();
+// create a new module
+var btc_app = angular.module('btc_app',[]);
+
+//api url
 var api_url = "https://api.coindesk.com/v1/bpi/currentprice.json";
 
-var btc_app = angular.module('btc_app',[]);
-	
+//price controller
 btc_app.controller('price', function ($scope){
 	console.log("-- price controller --");
 	
+	//initial api get
 	$.getJSON(api_url, function(data){
 		var current_btc = data.bpi.USD.rate_float;
 		console.log(current_btc);
 		$scope.btc = current_btc;
 		$scope.$apply();	//vital piece of the puzzle
 	});
-	//console.log("wa " + get_price());
-});
-
-
-//update price
-$('#update_price').click(function(){
-	console.log("update price");
 	
-	$.getJSON(api_url, function(data){
-		var current_btc = data.bpi.USD.rate_float;
-		console.log(current_btc);
-		$scope.btc = current_btc;
-		$scope.$apply();	//vital piece of the puzzle
-	});
+	//when update button clicked 
+	$scope.update_price = function(){
+		$.getJSON(api_url, function(data){
+			var current_btc = data.bpi.USD.rate_float;
+			console.log(current_btc);
+			$scope.btc = current_btc;
+			$scope.$apply();	//vital piece of the puzzle
+		});
+	};
+	
+	$scope.round_toggle = function(){
+		console.log("round!");
+		//$scope.btc = Math.round(current_btc);
+		
+		$.getJSON(api_url, function(data){
+			var current_btc = data.bpi.USD.rate_float;
+			console.log(current_btc);
+			$scope.btc = Math.round(current_btc);
+			$scope.$apply();	//vital piece of the puzzle
+		});
+	};
+		
 });
 
-//round toggle
-$('#round_toggle').click(function(){
-	console.log("round price");
-	//get_price();
-});
-
-//$('#button').css
-
-//cursor blinking
+//cursor blinking focus
 //$("#focus").focus();
