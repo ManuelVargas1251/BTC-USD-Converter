@@ -1,5 +1,5 @@
 ![Programming language](https://img.shields.io/badge/Language-Javascript-black.svg)
-![Version](https://img.shields.io/badge/Version-1.0.2-blue.svg)
+![Version](https://img.shields.io/badge/Version-1.0.3-blue.svg)
 
 # BTC / USD Converter
 
