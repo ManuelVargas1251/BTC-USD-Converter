@@ -75,18 +75,13 @@ button{
 	border: none;
 	text-align: middle;
 	width: 30%;
-	height: 10%;
-	padding: 7px 22px;
+	height: 7%;
+	padding: 7px 10px;
 	display: inline;
 }
 
 button:focus{
 	outline:none;
-}
-
-button:hover{
-	background-color: var(--main-color);
-	color: white;
 }
 
 ::selection {
