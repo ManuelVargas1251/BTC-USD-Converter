@@ -17,8 +17,8 @@
   </tr>
   <tr>
    <td>USD*</td >
-   <td>
-    <input type="number" ng-model="btc"/>
+   <td id="flash">
+    <input id="flash_input" type="number" ng-model="btc"/>
    </td>
   </tr>
  </table>
@@ -49,7 +49,7 @@
 	
 	<!-- Buttons -->
 	<div style="padding: 8px 8px;">
-	<button ng-click="update_price()"><a>UPDATE</a></button>
+	<button id="update" ng-click="update_price()"><a>UPDATE</a></button>
 	<button ng-click="round_toggle()"><a>ROUND</a></button>
 	</div>
 	
