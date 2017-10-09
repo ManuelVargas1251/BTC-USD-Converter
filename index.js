@@ -23,6 +23,10 @@ btc_app.controller('price', function ($scope){
 			else{
 				$scope.btc = Math.round(current_btc);
 			}
+			//flashing when trying to update
+			$("#update").click(function() {
+				$('#flash').fadeOut(100).fadeIn(100);
+			});
 			$scope.$apply();	//vital piece of the puzzle
 		});
 	}
@@ -41,11 +45,7 @@ btc_app.controller('price', function ($scope){
 	};
 });
 
-//flashing when trying to update
-$("#update").click(function() {
-  $('#flash').fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
-	$('#flash_input').fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
-});
+
 
 //cursor blinking focus
 $("#focus").focus();
