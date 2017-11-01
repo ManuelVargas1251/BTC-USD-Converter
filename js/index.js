@@ -13,7 +13,7 @@ btc_app.controller('price', function ($scope){
 	function update(round){
 		$.getJSON(api_url, function(data){
 			var current_btc = data.bpi.USD.rate_float;
-			//console.log(current_btc);
+			console.log(current_btc);
 
 			//give unrounded number
 			if(round == undefined){
@@ -23,10 +23,12 @@ btc_app.controller('price', function ($scope){
 			else{
 				$scope.btc = Math.round(current_btc);
 			}
+			
 			//flashing when trying to update
-			$("#update").click(function() {
+			$("#update_button").click(function() {
 				$('#flash').fadeOut(100).fadeIn(100);
 			});
+			
 			$scope.$apply();	//vital piece of the puzzle
 		});
 	}
@@ -45,5 +47,6 @@ btc_app.controller('price', function ($scope){
 	};
 });
 
-//cursor blinking focus
-$("#focus").focus();
+
+	//cursor blinking focus
+	$("#focus").focus();
