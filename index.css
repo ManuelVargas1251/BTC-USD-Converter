@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500');
 
 html{
+	/* css variables */
 	--main-color: limegreen;
 	--font-fam: 'Montserrat',helvetica;
 	--font-size: 27px;
@@ -76,8 +77,8 @@ button{
 	background-color: #111;
 	border: none;
 	text-align: middle;
-	width: 30%;
-	height: 7%;
+	width: 140px;
+	height: 70px;
 	padding: 7px 10px;
 	display: inline;
 }
