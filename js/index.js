@@ -11,18 +11,17 @@ btc_app.controller('price', function ($scope){
 	
 	//update definition
 	function update(round){
+		
 		$.getJSON(api_url, function(data){
+			
 			var current_btc = data.bpi.USD.rate_float;
 			console.log(current_btc);
 
 			//give unrounded number
-			if(round == undefined){
-				$scope.btc = current_btc;
-			}
-			//give rounded number
-			else{
+			if(round === "round")
 				$scope.btc = Math.round(current_btc);
-			}
+			else	//give original number
+				$scope.btc = current_btc;
 			
 			//flashing when trying to update
 			$("#update_button").click(function() {
@@ -38,15 +37,14 @@ btc_app.controller('price', function ($scope){
 	
 	//update button click 
 	$scope.update_price = function(){
-		update(undefined);
+		update();
 	};
 	
 	//round button click
 	$scope.round_toggle = function(){
-		update(true); //round == true
+		update("round");
 	};
 });
 
-
-	//cursor blinking focus
-	$("#focus").focus();
+//cursor blinking focus
+$("#focus").focus();
