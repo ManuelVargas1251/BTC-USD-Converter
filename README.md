@@ -11,13 +11,7 @@ Calls the Coindesk API to update to the current hourly average of Bitcoin.
 	
 #### **Round**		
 Calls update along with [`Math.round()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round).		
-	<!---
-#### **Coin** (Planned)		
-Choose a different coin (LTC,ETH, ZEC etc.) to interact with.		
-		
-#### **Save** (Planned)		
-Save the current amount and conversion as a record to reuse the interface (records are temporary and will not save on refresh).		
-	--->
+
 ## References		
  		
 - [Angular](https://angularjs.org/)		
