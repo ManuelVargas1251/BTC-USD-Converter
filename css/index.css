@@ -1,7 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
 
+/*@import url('https://fonts.googleapis.com/css?family=Montserrat:500');*/
+
+input{
+	border: none;
+}
+
+
+/*
 html{
-	/* css variables */
 	--main-color: limegreen;
 	--font-fam: 'Montserrat',helvetica;
 	--font-size: 27px;
@@ -34,7 +40,7 @@ input, input[type=number]{
 	margin: 0px;
 	width: 100%;
 	height: 100%;
-	padding: 0px 0px; /*not this*/
+	padding: 0px 0px; 
 	background-color: #1c1c1c;
 	border: none;
 }
@@ -44,7 +50,7 @@ input:focus, input[type=number]:focus{
 	border: 0px solid var(--main-color);
 }
 
-/* hide arrow keys */
+
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
 	-webkit-appearance: none;
@@ -91,3 +97,4 @@ button:focus{
 	color: white; 
 	background: var(--main-color);
 }
+*/

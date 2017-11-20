@@ -1,82 +1,118 @@
-<html>
-<link rel="stylesheet" href="index.css"/>
+<!doctype html>
+<html lang="en">
 
-<div id="body" ng-app="btc_app" ng-init="stdbtc=1;stdusd=0;_btc=0.53;" ng-controller="price">
- <h1><span style="color: gold;">BTC</span> to USD 🎃</h1>
-	
- <table>
-  <tr>
-   <th>STANDARD</th>
-   <th>AMOUNT</th>
-  </tr>
-  <tr>
-   <td>BTC</td>
-   <td>
-    <input type="number" ng-model="stdbtc" />
-   </td>
-  </tr>
-  <tr>
-   <td>USD*</td >
-   <td id="flash">
-    <input id="flash_input" type="number" ng-model="btc"/>
-   </td>
-  </tr>
- </table>
 
- <br/>
+	<head>
+		<title>BTC USD Converter</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="css/index.css"/>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/bootstrap.min.css" >
+	</head>
 
- <table>
-  <tr>
-   <th>YOU</th>
-   <th>AMOUNT</th>
-  </tr>
-  <tr>
-   <td>BTC*</td>
-   <td>
-    <input id='focus' type="number" ng-model="_btc"/>
-   </td>
-  </tr>
-  <tr>
-   <td >USD</td>
-   <td>
-    ${{(btc*_btc)/stdbtc}}
-   </td>
-  </tr>
- </table>
+	<!-- Title -->
+	<!--<h1 class="text-center py-3">BTC  USD</h1>
+As a heading -->
+	<nav class="navbar navbar-light bg-light">
+		<span class="navbar-brand mb-0 h1">BTC USD</span>
+	</nav>
 
- <br/>
+	<body id="body" ng-app="btc_app" ng-init="stdbtc=1;stdusd=0;_btc=0.53;" ng-controller="price">
+		<div class="container-fluid my-2">
 
-	
-	<!-- Buttons -->
-	<div style="padding: 8px 8px;">
-	<button id="update" ng-click="update_price()"><a>UPDATE</a></button>
-	<button ng-click="round_toggle()"><a>ROUND</a></button>
-	</div>
-	
- <!-- About -->
- <p>
-	<h2>Inputs 👻</h2>
-	 	* Real-Time Hourly BTC Average<br>
-		* Your BTC value<p>
-		BTC API by <a href="//www.coindesk.com/api/" 	
-									target="_blank">coindesk</a>
- </p>
-</div>
 
-	<script
-	  src="https://code.jquery.com/jquery-3.2.1.min.js"
-	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	  crossorigin="anonymous">
-	</script>
-	
-	<script
-  		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js">
-	</script>
-	
-	<script 
-			src="index.js">
-	</script>
-	
 
-	
+			<!-- Coin Table -->
+			<table class="table table-sm table-bordered px2">
+
+				<thead class="thead-default">
+					<tr>
+						<th scope="col">Standard</th>
+						<th scope="col">Amount</th>
+					</tr>
+				</thead>
+
+				<tbody>
+
+					<tr>
+						<td scope="row">BTC</td>
+						<td>
+							<input type="number" ng-model="stdbtc" />
+						</td>
+					</tr>
+					<tr>
+						<td scope="row">USD*</td >
+						<td id="flash">
+							<input id="flash_input" type="number" ng-model="btc"/>
+						</td>
+					</tr>
+				</tbody>
+
+			</table>
+
+			<!-- Your Table-->
+			<table class="table table-sm table-bordered">
+				<thead class="thead-default">
+					<tr>
+						<th scope="col">Standard</th>
+						<th scope="col">Amount</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td scope="row">BTC</td>
+						<td scope="row">
+							<input id='focus' type="number" ng-model="_btc"/>
+						</td>
+					</tr>
+					<tr>
+						<td >USD</td>
+						<td>
+							${{(btc*_btc)/stdbtc}}
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<!-- Buttons -->
+			<div class="py-3">
+				<!-- Update Button -->
+				<button 
+						id="update_button" 
+						type="button"
+						class="btn btn-outline-primary btn-block"
+						ng-click="update_price()">Update</button>
+
+				<!-- Round Button -->
+				<button 
+						id="round_button" 
+						type="button" 
+						class="btn btn-outline-primary btn-block"
+						ng-click="round_toggle()">Round</button>
+			</div>
+
+			<!-- About Card -->
+			<div class="card py-1 " >
+				<div class="card-body">
+					<h4 class="card-title">Inputs 👻</h4>
+					<p class="card-text">
+						Real-Time Hourly BTC Average<br/>
+						Your BTC value
+						BTC API by <a href="//www.coindesk.com/api/"
+									  target="_blank">coindesk</a>
+					</p>
+				</div>
+			</div>
+
+
+		</div>
+	</body>
+
+	<!--Jquery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="js/index.js"></script>
 </html>
