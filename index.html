@@ -20,61 +20,67 @@ As a heading -->
 	</nav>
 
 	<body id="body" ng-app="btc_app" ng-init="stdbtc=1;stdusd=0;_btc=0.53;" ng-controller="price">
-		<div class="container-fluid my-2">
+		<div class="container my-2">
 
 
+			<div class="card">
+				<div class="card-block m-3">
 
-			<!-- Coin Table -->
-			<table class="table table-sm table-bordered px2">
+					<!-- Coin Table -->
+					<table class="table table-sm table-bordered px2">
 
-				<thead class="thead-default">
-					<tr>
-						<th scope="col">Standard</th>
-						<th scope="col">Amount</th>
-					</tr>
-				</thead>
+						<thead class="thead-default">
+							<tr>
+								<th scope="col">Standard</th>
+								<th scope="col">Amount</th>
+							</tr>
+						</thead>
 
-				<tbody>
+						<tbody>
 
-					<tr>
-						<td scope="row">BTC</td>
-						<td>
-							<input type="number" ng-model="stdbtc" />
-						</td>
-					</tr>
-					<tr>
-						<td scope="row">USD*</td >
-						<td id="flash">
-							<input id="flash_input" type="number" ng-model="btc"/>
-						</td>
-					</tr>
-				</tbody>
+							<tr>
+								<td scope="row">BTC</td>
+								<td>
+									<input type="number" ng-model="stdbtc" />
+								</td>
+							</tr>
+							<tr>
+								<td scope="row">USD*</td >
+								<td id="flash">
+									<input id="flash_input" type="number" ng-model="btc"/>
+								</td>
+							</tr>
+						</tbody>
 
-			</table>
+					</table>
 
-			<!-- Your Table-->
-			<table class="table table-sm table-bordered">
-				<thead class="thead-default">
-					<tr>
-						<th scope="col">Standard</th>
-						<th scope="col">Amount</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td scope="row">BTC</td>
-						<td scope="row">
-							<input id='focus' type="number" ng-model="_btc"/>
-						</td>
-					</tr>
-					<tr>
-						<td >USD</td>
-						<td>
-							${{(btc*_btc)/stdbtc}}
-						</td>
-					</tr>
-				</tbody>
-			</table>
+					<!-- Your Table-->
+					<table class="table table-sm table-bordered">
+						<thead class="thead-default">
+							<tr>
+								<th scope="col">Standard</th>
+								<th scope="col">Amount</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td scope="row">BTC</td>
+								<td scope="row">
+									<input id='focus' type="number" ng-model="_btc"/>
+								</td>
+							</tr>
+							<tr>
+								<td >USD</td>
+								<td>
+									${{(btc*_btc)/stdbtc}}
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div>
+			</div>
+
 
 			<!-- Buttons -->
 			<div class="py-3">
@@ -82,14 +88,14 @@ As a heading -->
 				<button 
 						id="update_button" 
 						type="button"
-						class="btn btn-outline-primary btn-block"
+						class="btn btn-primary btn-block"
 						ng-click="update_price()">Update</button>
 
 				<!-- Round Button -->
 				<button 
 						id="round_button" 
 						type="button" 
-						class="btn btn-outline-primary btn-block"
+						class="btn btn-primary btn-block"
 						ng-click="round_toggle()">Round</button>
 			</div>
 
@@ -97,12 +103,12 @@ As a heading -->
 			<div class="card py-1 " >
 				<div class="card-body">
 					<h4 class="card-title">Inputs 👻</h4>
-					<p class="card-text">
-						Real-Time Hourly BTC Average<br/>
-						Your BTC value
+					<div class="card-text">
+						• Real-Time Hourly BTC Average<br/>
+						• Your BTC value
 						BTC API by <a href="//www.coindesk.com/api/"
 									  target="_blank">coindesk</a>
-					</p>
+					</div>
 				</div>
 			</div>
 

@@ -5,6 +5,10 @@ input{
 	border: none;
 }
 
+input, textarea{
+    background-color:#666;
+    color: #FFF;
+}
 
 /*
 html{
