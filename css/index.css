@@ -1,105 +1,110 @@
 
 /*@import url('https://fonts.googleapis.com/css?family=Montserrat:500');*/
 
-input{
+
+
+input, textarea{
+	background-color: #666;
+	color: #FFF;
+	padding: 5px;
 	border: none;
 }
 
-input, textarea{
-    background-color: #666;
-    color: #FFF;
-	padding: 5px;
+@media (min-width: 992px) { 
+	.container{
+		width: 35% !important;
+	}
 }
 
 /* Old Styles as reference for future customizations
 html{
-	--main-color: limegreen;
-	--font-fam: 'Montserrat',helvetica;
-	--font-size: 27px;
-	
-	font-family: var(--font-fam);
-	font-size: 170%;
-	background-color: #1c1c1c;
-	color: #eee;
-	padding: 20px;
-	padding-top: 0px;
-	overflow: hidden;
+--main-color: limegreen;
+--font-fam: 'Montserrat',helvetica;
+--font-size: 27px;
+
+font-family: var(--font-fam);
+font-size: 170%;
+background-color: #1c1c1c;
+color: #eee;
+padding: 20px;
+padding-top: 0px;
+overflow: hidden;
 }
 #body{
-	width: 650px;
+width: 650px;
 }
 
 h1{
-	color: var(--main-color);
+color: var(--main-color);
 }
 a{
-	text-decoration: none;
-	color: var(--main-color);
+text-decoration: none;
+color: var(--main-color);
 }
 
 
 input, input[type=number]{
-	font-size: var(--font-size);
-	font-family: var(--font-fam);
-	color: var(--main-color);
-	margin: 0px;
-	width: 100%;
-	height: 100%;
-	padding: 0px 0px; 
-	background-color: #1c1c1c;
-	border: none;
+font-size: var(--font-size);
+font-family: var(--font-fam);
+color: var(--main-color);
+margin: 0px;
+width: 100%;
+height: 100%;
+padding: 0px 0px; 
+background-color: #1c1c1c;
+border: none;
 }
 
 input:focus, input[type=number]:focus{
-	outline: none !important;
-	border: 0px solid var(--main-color);
+outline: none !important;
+border: 0px solid var(--main-color);
 }
 
 
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	margin: 0; 
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+margin: 0; 
 }
 
 table{
-	border: 1px solid white;
-	border-collapse: collapse;
-	color: white;
+border: 1px solid white;
+border-collapse: collapse;
+color: white;
 }
 
 td,th{
-	border: 4px solid #111;
-	font-size: var(--font-size);
-	padding: 10px;
-	padding-top: 0px;
-	width: 1%;
+border: 4px solid #111;
+font-size: var(--font-size);
+padding: 10px;
+padding-top: 0px;
+width: 1%;
 }
 
 th{
-	
-	background-color: #111;
+
+background-color: #111;
 }
 button{
-	font-size: var(--font-size);
-	font-family: var(--font-fam);
-	background-color: #111;
-	border: none;
-	text-align: middle;
-	width: 140px;
-	height: 70px;
-	padding: 7px 10px;
-	display: inline;
+font-size: var(--font-size);
+font-family: var(--font-fam);
+background-color: #111;
+border: none;
+text-align: middle;
+width: 140px;
+height: 70px;
+padding: 7px 10px;
+display: inline;
 }
 
 button:focus{
-	outline:none;
+outline:none;
 }
 
 ::selection {
-	color: white; 
-	background: var(--main-color);
+color: white; 
+background: var(--main-color);
 }
 */
