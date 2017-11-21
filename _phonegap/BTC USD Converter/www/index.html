@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>BTC USD Converter</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+		<link rel="stylesheet" href="css/index.css"/>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/bootstrap.min.css" >
+	</head>
+
+	<!-- Title -->
+	<nav class="navbar navbar-light bg-light py-2">
+		<span class="navbar-brand mb-0 h1">BTC USD Converter</span>
+	</nav>
+
+	<body id="body" ng-app="btc_app" ng-init="stdbtc=1;stdusd=0;_btc=0.53;" ng-controller="price">
+		<div class="container my-2">
+
+
+			<div class="card">
+				<div class="card-block  px-2 pt-3">
+
+					<!-- Coin Table -->
+					<table class="table">
+
+						<thead class="thead-default">
+							
+							<tr>
+								<th scope="col">1</th>
+								<th scope="col">Price</th>
+							</tr>
+							
+						</thead>
+
+						<tbody>
+
+							<tr>
+								<td scope="row">BTC</td>
+								<td>
+									<input type="number" ng-model="stdbtc" />
+								</td>
+							</tr>
+							
+							<tr>
+								<td scope="row">USD</td >
+								<td id="flash">
+									<input id="flash_input" type="number" ng-model="btc"/>
+								</td>
+							</tr>
+							
+						</tbody>
+
+					</table>
+
+					<!-- Your Table-->
+					<table class="table">
+						<thead class="thead-default">
+							<tr>
+								<th scope="col">2</th>
+								<th scope="col">Input</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td scope="row">BTC</td>
+								<td scope="row">
+									<input id='focus' type="number" ng-model="_btc"/>
+								</td>
+							</tr>
+							<tr>
+								<td >USD</td>
+								<td>
+									${{(btc*_btc)/stdbtc}}
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div>
+			</div>
+
+
+			<!-- Buttons -->
+			<div class="py-3">
+				
+				<!-- Update Button -->
+				<button 
+						id="update_button" 
+						type="button"
+						class="btn btn-primary btn-block btn-lg"
+						ng-click="update_price()">Update</button>
+
+				<!-- Round Button -->
+				<button 
+						id="round_button" 
+						type="button" 
+						class="btn btn-primary btn-block btn-lg"
+						ng-click="round_toggle()">Round</button>
+			</div>
+
+			<!-- About Card -->
+			<div class="card">
+				<div class="card-body p-2">
+					<div class="card-text">
+						Powered by <a href="//www.coindesk.com/api/"
+									  target="_blank">CoinDesk</a>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</body>
+
+	<!--Angular, Jquery, Popper, and my js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="js/index.js"></script>
+</html>
