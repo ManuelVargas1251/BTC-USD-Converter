@@ -1,6 +1,6 @@
 # BTC / USD Converter
   		  
-Simple web app to convert currency; BTC to USD using Angular. Using [Coindesk API](https://www.coindesk.com/api/) for hourly averages		 +Adding [Bootstrap 4](http://getbootstrap.com/)
+Simple web/mobile app to convert currency; BTC to USD using Angular. Using [Coindesk API](https://www.coindesk.com/api/) for hourly averages and [Bootstrap](http://getbootstrap.com/) for design.
 	
 [Demo](http://mnl.space/BTC-USD-Converter/) | [Codepen](https://codepen.io/manuelvargas1251/pen/qPOaVN)		
 	
@@ -19,5 +19,7 @@ Calls update along with [`Math.round()`](https://developer.mozilla.org/en-US/doc
 - [jQuery](https://jquery.com/)		
 		
 - [Coindesk](https://www.coindesk.com/api/)
+
+- [Bootstrap](http://getbootstrap.com/)
 
 - [Bootstrap Theme](https://bootswatch.com/)
