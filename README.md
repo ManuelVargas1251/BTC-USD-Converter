@@ -1,4 +1,4 @@
-# BTC / USD Converter
+# BTC / USD Converter Chrome Extension 
   		  
 Simple web/mobile app to convert currency; BTC to USD using Angular. Using [Coindesk API](https://www.coindesk.com/api/) for hourly averages and [Bootstrap](http://getbootstrap.com/) for design.
 	
